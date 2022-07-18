@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+    <div class="content">
+        <div class="mainTitle"><h1>Рассчитать стоимость автомобиля:</h1></div>
+        <div class="model">
+            <div class="title"><h2>Выберите марку автомобиля:</h2></div>
+            <div class="modelOptions">
+            <select name="auto" id="auto" class="select" onchange = "selectModel(this)">
+                <option class="car" value="none">Not selected</option>
+                <option class="car" value="jeep">Jeep</option>
+                <option class="car" value="mercedes">Mercedes</option>
+                <option class="car" value="bmw">BMW</option>
+                <option class="car" value="audi">Audi</option>
+            </select> 
+            <select name="make" id="make" style="display: none;" class="selectMake">
+
+            </select> 
+            </div>
+        </div>  
+        <div class="autoClass"> 
+             <div class="title"><h2>Класс:</h2></div>
+             <input type="radio" id="business" class="classAuto" name="classAuto" value="50000">
+             <label for="business">Business</label><br>
+             <input type="radio" id="comfort" class="classAuto" name="classAuto" value="30000">
+             <label for="comfort">Comfort</label><br>
+             <input type="radio" id="sport" class="classAuto" name="classAuto" value="40000">
+             <label for="sport">Sport</label>
+        </div>
+        <div class="complectation">
+            <div class="title"><h2>Комплектация:</h2></div>
+            <label for="leather">Кожаный салон
+                <input type="checkbox" id="leather" class="addedProperties" name="option" value="2000">
+            </label>
+            <label for="heatedSeats">Подогрев сидений
+                <input type="checkbox" id="heatedSeats" class="addedProperties" name="option" value="1000">
+            </label>
+            <label for="camera">Камеры обзора 360°
+                <input type="checkbox" id="camera" class="addedProperties" name="option" value="1500">
+            </label>
+            <label for="assistant1">Ассистент перестроения
+                <input type="checkbox" id="assistant1" class="addedProperties" name="option" value="1000">
+            </label>
+            <label for="roof">Панорамная крыша
+                <input type="checkbox" id="roof" class="addedProperties" name="option" value="3000">
+            </label>
+            <label for="assistant2">Парковочный ассистент
+                <input type="checkbox" id="assistant2" class="addedProperties" name="option" value="2000">
+            </label>
+        </div>
+        <div class="countBtn"><button id="submit">Рассчитать</button></div>
+        <div class="priceWindow">
+            <label for="price" id="finalPrice">Итоговая стоимость:</label>
+            <input type="text" id="price" value="">
+        </div>
+        
+    </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

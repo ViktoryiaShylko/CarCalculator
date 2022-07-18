@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      background-color: rgb(32, 32, 32);
+      height:100vh;
+      width: 100vw;
+  }
+
+  .mainTitle{
+      font-size: 25px;
+      grid-area: mainTitle;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+  }
+  .model{
+      grid-area: model;
+ 
+  }
+  .modelOptions{
+      height: 70px;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .modelMake{
+      grid-area: modelMake;
+  }
+  .autoClass{
+      grid-area: autoClass;
+  }
+
+  .complectation{
+      grid-area: complectation;
+      display: flex;
+      flex-direction: column;
+  }
+  .countBtn{
+      
+      grid-area: btn; 
+      align-self: center;  
+  }
+  .priceWindow{
+    
+    grid-area: price;
+    align-self: center; 
+  }
+  .content{
+    font-size: 20px;
+    height: 70vh;
+    width: 80vw;
+    padding:0 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    background: rgb(208, 208, 208);
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20% 35% 35% 10%;
+        grid-template-areas:
+        "mainTitle mainTitle"
+        "model complectation"
+        "autoClass complectation"
+        "btn price";
+  }
+  .title{
+      margin-bottom: 20px;
+      font-size: 20px;
+  }
+  #finalPrice{
+      font-size: 20px;
+      font-weight: 550;
+  }
+  .select,
+  #price {
+    border: 0.5px solid gray;
+    padding: 2%;
+  
+  }
+  #submit{
+      border: 1px solid rgb(31, 31, 31);
+      background-color: rgb(185, 120, 120);
+      padding: 2%;
+      cursor: pointer;
+      width: 30vw;
+      font-size: 15px;
+  }
